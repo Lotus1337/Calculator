@@ -20,6 +20,10 @@ def divide(x,y):
 def sqr(x):
     return x * x
 
+#cube numbers
+def cube(x):
+    return x * x * x
+
 #reciprocal
 def reci(x):
     return 1 / x
@@ -31,15 +35,16 @@ print("2. Subtract")
 print("3. Multiply")
 print("4. Divide")
 print("5. Square")
-print("6. Reciprocal")
+print("6. Cube")
+print("7. Reciprocal")
 
 #output after num1 and num2 are entered
 while True:
-    choice = input("Enter choice(1/2/3/4/5/6)")
+    choice = input("Enter choice(1/2/3/4/5/6/7)")
 
-    if choice in ('1', '2', '3', '4', '5', '6'):
+    if choice in ('1', '2', '3', '4', '5', '6', '7'):
         num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number (If choice is 5 or 6, just enter 1): "))
+        num2 = float(input("Enter second number (If choice is 5, 6, or 7, just enter 1): "))
 
         if choice == '1':
             print(num1, "+", num2, "=", add(num1, num2))
@@ -54,9 +59,12 @@ while True:
             print(num1, "/", num2, "=", divide(num1, num2))
 
         elif choice == '5':
-            print(num1,"^2", "=", sqr(num1))
+            print(num1, "^2", "=", sqr(num1))
 
         elif choice == '6':
+            print(num1, "^3", "=", cube(num1))
+
+        elif choice == '7':
             print("1", "/", num1, "=", reci(num1))
     else:
         print("Invalid Input")
