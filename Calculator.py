@@ -32,6 +32,13 @@ def reci(x):
 def pi(x):
     return x * 3.14
 
+#Square-root
+def sqrt(x):
+
+    import math
+
+    return math.sqrt(x)
+
 #input (selecting operation)
 print("Select operation")
 print("1. Add")
@@ -42,37 +49,52 @@ print("5. Square")
 print("6. Cube")
 print("7. Reciprocal")
 print("8. Multiply by pi")
+print("9. Square-root")
 
-#output after num1 and num2 are entered
+#output after operation is selected
 while True:
-    choice = input("Enter choice(1/2/3/4/5/6/7/8)")
+    choice = input("Enter choice (1/2/3/4/5/6/7/8/9)")
 
-    if choice in ('1', '2', '3', '4', '5', '6', '7', '8'):
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number (If choice is 5, 6, 7, or 8 just enter 1): "))
+    if choice in ('1', '2', '3', '4', '5', '6', '7', '8', '9'):
 
         if choice == '1':
-            print(num1, "+", num2, "=", add(num1, num2))
+            addamount1 = float(input("Enter the first number you need to add: "))
+            addamount2 = float(input("Enter the second number you need to add: "))
+            print(addamount1, "+", addamount2, "=", add(addamount1, addamount2))
 
         elif choice == '2':
-            print(num1, "-", num2, "=", subtract(num1, num2))
+            subamount1 = float(input("Enter the first number you need to subtract: "))
+            subamount2 = float(input("Enter the second number you need to subtract: "))
+            print(subamount1, "-", subamount2, "=", subtract(subamount1, subamount2))
 
         elif choice == '3':
-            print(num1, "x", num2, "=", multiply(num1, num2))
+            multiamount1 = float(input("Enter the first number you need to multiply: "))
+            multiamount2 = float(input("Enter the second number you need to multiply: "))
+            print(multiamount1, "x", multiamount2, "=", multiply(multiamount1, multiamount2))
 
         elif choice == '4':
-            print(num1, "/", num2, "=", divide(num1, num2))
+            divamount1 = float(input("Enter the first number you need to divide: "))
+            divamount2 = float(input("Enter the second number you need to divide: "))
+            print(divamount1, "/", divamount2, "=", divide(divamount1, divamount2))
 
         elif choice == '5':
-            print(num1, "^2", "=", sqr(num1))
+            sqramount1 = float(input("Enter your number that needs to be squared: "))
+            print(sqramount1, "^2", "=", sqr(sqramount1))
 
         elif choice == '6':
-            print(num1, "^3", "=", cube(num1))
+            cubeamount1 = float(input("Enter your number that needs to be cubed: "))
+            print(cubeamount1, "^3", "=", cube(cubeamount1))
 
         elif choice == '7':
-            print("1", "/", num1, "=", reci(num1))
+            reciamount1 = float(input("Enter your number that needs to be divided by 1: "))
+            print("1", "/", reciamount1, "=", reci(reciamount1))
 
         elif choice == '8':
-            print(num1, "x", "pi", "= about", pi(num1))
+            piamount1 = float(input("Enter your number that needs to be multiplied by pi: "))
+            print(piamount1, "x", "pi", "= about", pi(piamount1))
+
+        elif choice == '9':
+            sqrtamount1 = float(input("Enter your number that needs to be square-rooted: "))
+            print(sqrtamount1, "sqrt", "=", sqrt(sqrtamount1))
     else:
         print("Invalid Input")
