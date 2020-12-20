@@ -16,13 +16,9 @@ def multiply(x,y):
 def divide(x,y):
     return x / y
 
-#square numbers
-def sqr(x):
-    return x * x
-
-#cube numbers
-def cube(x):
-    return x * x * x
+#numbers to the power of x
+def power(x,y):
+    return pow(x, y)
 
 #reciprocal
 def reci(x):
@@ -45,17 +41,16 @@ print("1. Add")
 print("2. Subtract")
 print("3. Multiply")
 print("4. Divide")
-print("5. Square")
-print("6. Cube")
-print("7. Reciprocal")
-print("8. Multiply by pi")
-print("9. Square-root")
+print("5. Exponents")
+print("6. Reciprocal")
+print("7. Multiply by pi")
+print("8. Square-root")
 
 #output after operation is selected
 while True:
     choice = input("Enter choice (1/2/3/4/5/6/7/8/9)")
 
-    if choice in ('1', '2', '3', '4', '5', '6', '7', '8', '9'):
+    if choice in ('1', '2', '3', '4', '5', '6', '7', '8'):
 
         if choice == '1':
             addamount1 = float(input("Enter the first number you need to add: "))
@@ -78,22 +73,18 @@ while True:
             print(divamount1, "/", divamount2, "=", divide(divamount1, divamount2))
 
         elif choice == '5':
-            sqramount1 = float(input("Enter your number that needs to be squared: "))
-            print(sqramount1, "^2", "=", sqr(sqramount1))
-
+            powamount1 = float(input("Enter the number you want to raise to n power: "))
+            powamount2 = float(input("Enter the amount you want to raise: "))
+            print(powamount1, "^", powamount2, "=", power(powamount1, powamount2))
         elif choice == '6':
-            cubeamount1 = float(input("Enter your number that needs to be cubed: "))
-            print(cubeamount1, "^3", "=", cube(cubeamount1))
-
-        elif choice == '7':
             reciamount1 = float(input("Enter your number that needs to be divided by 1: "))
             print("1", "/", reciamount1, "=", reci(reciamount1))
 
-        elif choice == '8':
+        elif choice == '7':
             piamount1 = float(input("Enter your number that needs to be multiplied by pi: "))
             print(piamount1, "x", "pi", "= about", pi(piamount1))
 
-        elif choice == '9':
+        elif choice == '8':
             sqrtamount1 = float(input("Enter your number that needs to be square-rooted: "))
             print(sqrtamount1, "sqrt", "=", sqrt(sqrtamount1))
     else:
