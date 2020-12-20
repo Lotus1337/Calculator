@@ -35,6 +35,13 @@ def sqrt(x):
 
     return math.sqrt(x)
 
+#factorial
+def fact(x):
+
+     import math
+
+     return math.factorial(x)
+
 #input (selecting operation)
 print("Select operation")
 print("1. Add")
@@ -45,12 +52,12 @@ print("5. Exponents")
 print("6. Reciprocal")
 print("7. Multiply by pi")
 print("8. Square-root")
-
+print("9. Factorial")
 #output after operation is selected
 while True:
-    choice = input("Enter choice (1/2/3/4/5/6/7/8/9)")
+    choice = input("Enter choice (1/2/3/4/5/6/7/8/9): ")
 
-    if choice in ('1', '2', '3', '4', '5', '6', '7', '8'):
+    if choice in ('1', '2', '3', '4', '5', '6', '7', '8', '9'):
 
         if choice == '1':
             addamount1 = float(input("Enter the first number you need to add: "))
@@ -87,5 +94,9 @@ while True:
         elif choice == '8':
             sqrtamount1 = float(input("Enter your number that needs to be square-rooted: "))
             print(sqrtamount1, "sqrt", "=", sqrt(sqrtamount1))
+
+        elif choice == '9':
+            factamount1 = float(input("Enter the number that is a factorial: "))
+            print(factamount1, "!", "=", fact(factamount1))
     else:
         print("Invalid Input")
